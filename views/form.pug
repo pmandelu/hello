@@ -1,0 +1,90 @@
+extends layout
+
+block content
+  script.
+    $(document).ready(function(){
+      $("#box1").css({ opacity: 0 });
+      $("#box2").css({ opacity: 0 });
+      $("#box3").css({ opacity: 0 });
+      $("#box4").css({ opacity: 0 });
+        setTimeout(
+           function() {
+              $("#box1").animate({bottom:'+20px', opacity: '1'});
+           }
+        , 50);
+        setTimeout(
+           function() {
+              $("#box2").animate({bottom:'+20px', opacity: '1'});
+           }
+        , 200);
+        setTimeout(
+           function() {
+              $("#box3").animate({bottom:'+20px', opacity: '1'});
+           }
+        , 350);
+        setTimeout(
+           function() {
+              $("#box4").animate({bottom:'+20px', opacity: '1'});
+           }
+        , 500); 
+      });
+  form(action="." method="POST")
+   div.imagecontainer#image
+     img.title#pic(src="/static/math.png" alt="math")
+   p
+   div.container#box1
+    input(
+      type="text"
+      id="num1"
+      name="num1"
+    )
+    | +
+    input(
+      type="text"
+      id="num2"
+      name="num2"
+    )
+    | 
+    input(type="submit" name="button1" value="Calculate")
+   div.container#box2
+    input(
+      type="text"
+      id="num3"
+      name="num3"
+    )
+    | -
+    input(
+      type="text"
+      id="num4"
+      name="num4"
+    )
+    | 
+    input(type="submit" name="button2" value="Calculate")
+   div.container#box3
+    input(
+      type="text"
+      id="num5"
+      name="num5"
+    )
+    | *
+    input(
+      type="text"
+      id="num6"
+      name="num6"
+    )
+    | 
+    input(type="submit" name="button3" value="Calculate")
+   div.container#box4
+    input(
+      type="text"
+      id="num7"
+      name="num7"
+    )
+    | /
+    input(
+      type="text"
+      id="num8"
+      name="num8"
+    )
+    | 
+    input(type="submit" name="button4" value="Calculate")

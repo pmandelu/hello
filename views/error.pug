@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  script.
+    $(document).ready(function(){
+      $("#box1").css({ opacity: 0 });
+        setTimeout(
+           function() {
+              $("#box1").animate({bottom:'+20px', opacity: '1'});
+           }
+        , 100);
+      });
+  div.container#box1
+    img.className#pic(src="/static/error.png" alt="error")
+    h1 Input error! Press back button to try again.

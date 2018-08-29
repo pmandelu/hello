@@ -1,0 +1,19 @@
+extends layout
+
+block content
+
+    script.
+      $(document).ready(function(){
+        $("h2").css({ opacity: 0 });
+        setTimeout(
+           function() {
+              $("h2").animate({opacity: '1',fontSize: '70px'}, "slow");
+           }
+        , 100); 
+      });
+	  
+    img.title#pic(src="/static/hello.png" alt="hello")
+    p   
+    h1 The number of request is
+    div.counter
+      h2 #{count}

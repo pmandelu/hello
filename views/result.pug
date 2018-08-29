@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  script.
+    $(document).ready(function(){
+      $("#box1").css({opacity: 0});
+      $("h1").css({fontSize:'10px'});
+        setTimeout(
+           function() {
+              $("#box1").animate({bottom:'+20px', opacity: '1'});
+           }
+        , 100);
+        setTimeout(
+           function() {
+              $("h1").animate({fontSize:'20px'});
+           }
+        , 100);
+      });
+  div.container#box1
+    h1 The result of #{a} #{str} #{b} is #{c}
